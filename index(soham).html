@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn HTML from Basic to Advanced</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #04284f;
+        }
+        code {
+            background-color: #e9ecef;
+            padding: 2px 4px;
+            border-radius: 4px;
+        }
+        pre {
+            background-color: #282a36;
+            color: #f8f8f2;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+        .example {
+            border: 1px solid #ddd;
+            padding: 10px;
+            margin: 10px 0;
+            background-color: #fff;
+        }
+        nav {
+            background-color: #083464;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        nav a {
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Learn HTML from Basic to Advanced Pro Level</h1>
+        <p>This is a complete, self-contained HTML tutorial designed for absolute beginners. No prior knowledge is required. We'll start with the basics and progress to advanced topics. Each section includes explanations, code examples, and live demonstrations where possible.</p>
+        <p>To use this tutorial: Save this code as an .html file (e.g., learn-html.html) and open it in any web browser. Read through the sections, copy the code examples, and experiment in your own files.</p>
+    </header>
+
+    <nav>
+        <a href="#intro">Introduction</a>
+        <a href="#basics">Basics</a>
+        <a href="#text">Text Elements</a>
+        <a href="#links-images">Links & Images</a>
+        <a href="#lists">Lists</a>
+        <a href="#tables">Tables</a>
+        <a href="#forms">Forms</a>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#semantic">Semantic HTML</a>
+        <a href="#attributes">Attributes, Classes, IDs</a>
+        <a href="#layout">Layout & Structure</a>
+        <a href="#meta">Head & Meta Tags</a>
+        <a href="#accessibility">Accessibility</a>
+        <a href="#advanced">Advanced Topics</a>
+        <a href="#best-practices">Best Practices</a>
+    </nav>
+
+    <section id="intro">
+        <h2>Introduction to HTML</h2>
+        <p>HTML stands for HyperText Markup Language. It's the standard language for creating web pages. HTML describes the structure of a web page using <em>tags</em> and <em>elements</em>.</p>
+        <ul>
+            <li><strong>Tags</strong>: Keywords surrounded by angle brackets, like <code>&lt;p&gt;</code> (opening) and <code>&lt;/p&gt;</code> (closing).</li>
+            <li><strong>Elements</strong>: Tags plus their content, e.g., <code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code>.</li>
+            <li>HTML is not case-sensitive, but lowercase is conventional.</li>
+            <li>Web browsers render HTML to display pages.</li>
+        </ul>
+        <p>HTML5 is the latest version, which we'll focus on.</p>
+    </section>
+
+    <section id="basics">
+        <h2>Basic HTML Structure</h2>
+        <p>Every HTML document has a basic skeleton:</p>
+        <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Page Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Your content here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: Declares the document as HTML5.</li>
+            <li><code>&lt;html&gt;</code>: Root element.</li>
+            <li><code>&lt;head&gt;</code>: Contains meta information.</li>
+            <li><code>&lt;body&gt;</code>: Visible content.</li>
+            <li>Comments: <code>&lt;!-- Comment --&gt;</code> (not displayed).</li>
+        </ul>
+        <div class="example">
+            <h3>Example:</h3>
+            <p>Hello, World!</p>
+        </div>
+        <p>Code for above: <code>&lt;p&gt;Hello, World!&lt;/p&gt;</code></p>
+    </section>
+
+    <section id="text">
+        <h2>Text Elements</h2>
+        <p>HTML provides tags for formatting text.</p>
+        <h3>Headings</h3>
+        <p>From <code>&lt;h1&gt;</code> (largest) to <code>&lt;h6&gt;</code> (smallest).</p>
+        <div class="example">
+            <h1>Heading 1</h1>
+            <h2>Heading 2</h2>
+            <h3>Heading 3</h3>
+        </div>
+        <pre><code>&lt;h1&gt;Heading 1&lt;/h1&gt;
+&lt;h2&gt;Heading 2&lt;/h2&gt;
+&lt;h3&gt;Heading 3&lt;/h3&gt;</code></pre>
+
+        <h3>Paragraphs</h3>
+        <p>Use <code>&lt;p&gt;</code> for paragraphs.</p>
+        <div class="example">
+            <p>This is a paragraph.</p>
+            <p>Another one.</p>
+        </div>
+
+        <h3>Inline Text Formatting</h3>
+        <ul>
+            <li><strong>Bold</strong>: <code>&lt;strong&gt;</code> or <code>&lt;b&gt;</code></li>
+            <li><em>Italic</em>: <code>&lt;em&gt;</code> or <code>&lt;i&gt;</code></li>
+            <li><u>Underline</u>: <code>&lt;u&gt;</code></li>
+            <li><strike>Strikethrough</strike>: <code>&lt;s&gt;</code></li>
+            <li><code>Code</code>: <code>&lt;code&gt;</code></li>
+            <li>Superscript: x<sup>2</sup> with <code>&lt;sup&gt;</code></li>
+            <li>Subscript: H<sub>2</sub>O with <code>&lt;sub&gt;</code></li>
+        </ul>
+        <pre><code>&lt;strong&gt;Bold&lt;/strong&gt; &lt;em&gt;Italic&lt;/em&gt;</code></pre>
+
+        <h3>Line Breaks and Horizontal Rules</h3>
+        <p>Use <code>&lt;br&gt;</code> for line breaks (self-closing tag).</p>
+        <p>Use <code>&lt;hr&gt;</code> for a horizontal line.</p>
+        <div class="example">
+            Line one<br>
+            Line two
+            <hr>
+        </div>
+    </section>
+
+    <section id="links-images">
+        <h2>Links and Images</h2>
+        <h3>Links</h3>
+        <p>Use <code>&lt;a&gt;</code> for hyperlinks.</p>
+        <div class="example">
+            <a href="https://example.com" target="_blank">Visit Example</a>
+        </div>
+        <pre><code>&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</code></pre>
+        <ul>
+            <li><code>href</code>: URL.</li>
+            <li><code>target="_blank"</code>: Opens in new tab.</li>
+            <li>Email link: <code>&lt;a href="mailto:email@example.com"&gt;Email&lt;/a&gt;</code></li>
+            <li>Anchor link: <code>&lt;a href="#section"&gt;Jump&lt;/a&gt;</code> to <code>&lt;div id="section"&gt;</code></li>
+        </ul>
+
+        <h3>Images</h3>
+        <p>Use <code>&lt;img&gt;</code> (self-closing).</p>
+        <div class="example">
+            <!-- Using a placeholder image -->
+            <img src="https://via.placeholder.com/150" alt="Placeholder Image" width="150" height="150">
+        </div>
+        <pre><code>&lt;img src="image.jpg" alt="Description" width="150" height="150"&gt;</code></pre>
+        <ul>
+            <li><code>src</code>: Image URL or path.</li>
+            <li><code>alt</code>: Alternative text for accessibility.</li>
+            <li><code>width</code> and <code>height</code>: Dimensions.</li>
+        </ul>
+    </section>
+
+    <section id="lists">
+        <h2>Lists</h2>
+        <h3>Unordered Lists</h3>
+        <div class="example">
+            <ul>
+                <li>Item 1</li>
+                <li>Item 2</li>
+            </ul>
+        </div>
+        <pre><code>&lt;ul&gt;
+    &lt;li&gt;Item 1&lt;/li&gt;
+    &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+
+        <h3>Ordered Lists</h3>
+        <div class="example">
+            <ol>
+                <li>First</li>
+                <li>Second</li>
+            </ol>
+        </div>
+        <pre><code>&lt;ol&gt;
+    &lt;li&gt;First&lt;/li&gt;
+    &lt;li&gt;Second&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+
+        <h3>Description Lists</h3>
+        <div class="example">
+            <dl>
+                <dt>Term</dt>
+                <dd>Description</dd>
+            </dl>
+        </div>
+        <pre><code>&lt;dl&gt;
+    &lt;dt&gt;Term&lt;/dt&gt;
+    &lt;dd&gt;Description&lt;/dd&gt;
+&lt;/dl&gt;</code></pre>
+        <p>Lists can be nested.</p>
+    </section>
+
+    <section id="tables">
+        <h2>Tables</h2>
+        <p>Use <code>&lt;table&gt;</code> for tabular data.</p>
+        <div class="example">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>Header 1</th>
+                        <th>Header 2</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Data 1</td>
+                        <td>Data 2</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <pre><code>&lt;table border="1"&gt;
+    &lt;thead&gt;
+        &lt;tr&gt;
+            &lt;th&gt;Header 1&lt;/th&gt;
+            &lt;th&gt;Header 2&lt;/th&gt;
+        &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+        &lt;tr&gt;
+            &lt;td&gt;Data 1&lt;/td&gt;
+            &lt;td&gt;Data 2&lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+        <ul>
+            <li><code>&lt;tr&gt;</code>: Table row.</li>
+            <li><code>&lt;th&gt;</code>: Header cell.</li>
+            <li><code>&lt;td&gt;</code>: Data cell.</li>
+            <li>Attributes like <code>colspan</code>, <code>rowspan</code> for merging cells.</li>
+        </ul>
+    </section>
+
+    <section id="forms">
+        <h2>Forms</h2>
+        <p>Forms collect user input with <code>&lt;form&gt;</code>.</p>
+        <div class="example">
+            <form action="#" method="get">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name"><br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+        <pre><code>&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name"&gt;&lt;br&gt;
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;</code></pre>
+        <h3>Input Types</h3>
+        <ul>
+            <li><code>type="text"</code>: Text field.</li>
+            <li><code>type="password"</code>: Hidden text.</li>
+            <li><code>type="email"</code>: Email validation.</li>
+            <li><code>type="number"</code>: Numbers.</li>
+            <li><code>type="checkbox"</code>: Checkboxes.</li>
+            <li><code>type="radio"</code>: Radio buttons.</li>
+            <li><code>type="file"</code>: File upload.</li>
+            <li><code>type="submit"</code>: Submit button.</li>
+        </ul>
+        <h3>Other Form Elements</h3>
+        <ul>
+            <li><code>&lt;textarea&gt;</code>: Multi-line text.</li>
+            <li><code>&lt;select&gt;</code>: Dropdown with <code>&lt;option&gt;</code>.</li>
+            <li><code>&lt;label&gt;</code>: Labels for inputs.</li>
+            <li>Attributes: <code>required</code>, <code>placeholder</code>, <code>value</code>.</li>
+        </ul>
+        <p>Note: Forms typically send data to a server (action URL), but for learning, we use # as placeholder.</p>
+    </section>
+
+    <section id="multimedia">
+        <h2>Multimedia</h2>
+        <h3>Audio</h3>
+        <p>Use <code>&lt;audio&gt;</code>.</p>
+        <pre><code>&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+&lt;/audio&gt;</code></pre>
+
+        <h3>Video</h3>
+        <p>Use <code>&lt;video&gt;</code>.</p>
+        <pre><code>&lt;video width="320" height="240" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+&lt;/video&gt;</code></pre>
+
+        <h3>Iframes</h3>
+        <p>Embed external content with <code>&lt;iframe&gt;</code>.</p>
+        <pre><code>&lt;iframe src="https://example.com" width="600" height="400"&gt;&lt;/iframe&gt;</code></pre>
+    </section>
+
+    <section id="semantic">
+        <h2>Semantic HTML</h2>
+        <p>Semantic elements provide meaning to content for better SEO and accessibility.</p>
+        <ul>
+            <li><code>&lt;header&gt;</code>: Page header.</li>
+            <li><code>&lt;nav&gt;</code>: Navigation.</li>
+            <li><code>&lt;main&gt;</code>: Main content.</li>
+            <li><code>&lt;article&gt;</code>: Independent content.</li>
+            <li><code>&lt;section&gt;</code>: Thematic grouping.</li>
+            <li><code>&lt;aside&gt;</code>: Sidebar.</li>
+            <li><code>&lt;footer&gt;</code>: Footer.</li>
+            <li><code>&lt;figure&gt;</code> and <code>&lt;figcaption&gt;</code>: For images with captions.</li>
+        </ul>
+        <pre><code>&lt;header&gt;Header&lt;/header&gt;
+&lt;main&gt;Main Content&lt;/main&gt;
+&lt;footer&gt;Footer&lt;/footer&gt;</code></pre>
+    </section>
+
+    <section id="attributes">
+        <h2>Attributes, Classes, and IDs</h2>
+        <p>Attributes provide additional info to elements.</p>
+        <ul>
+            <li>Global attributes: <code>class</code>, <code>id</code>, <code>style</code>, <code>title</code>.</li>
+            <li><code>id</code>: Unique identifier (one per page).</li>
+            <li><code>class</code>: For grouping (multiple elements).</li>
+        </ul>
+        <pre><code>&lt;div id="unique" class="group"&gt;Content&lt;/div&gt;</code></pre>
+        <p>Used with CSS/JS: <code>style="color: red;"</code> for inline styles.</p>
+    </section>
+
+    <section id="layout">
+        <h2>Layout and Structure</h2>
+        <p>Use <code>&lt;div&gt;</code> for generic containers (block-level).</p>
+        <p>Use <code>&lt;span&gt;</code> for inline containers.</p>
+        <h3>Block vs Inline</h3>
+        <ul>
+            <li>Block: Starts new line (e.g., <code>&lt;div&gt;</code>, <code>&lt;p&gt;</code>).</li>
+            <li>Inline: Doesn't (e.g., <code>&lt;span&gt;</code>, <code>&lt;a&gt;</code>).</li>
+        </ul>
+        <p>For layouts, combine with CSS (but HTML provides base).</p>
+    </section>
+
+    <section id="meta">
+        <h2>Head and Meta Tags</h2>
+        <p>The <code>&lt;head&gt;</code> contains non-visible info.</p>
+        <ul>
+            <li><code>&lt;title&gt;</code>: Browser title.</li>
+            <li><code>&lt;meta charset="UTF-8"&gt;</code>: Character encoding.</li>
+            <li><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code>: Responsive design.</li>
+            <li><code>&lt;meta name="description" content="Page desc"&gt;</code>: SEO description.</li>
+            <li><code>&lt;link rel="stylesheet" href="styles.css"&gt;</code>: Link CSS.</li>
+            <li><code>&lt;script src="script.js"&gt;&lt;/script&gt;</code>: Link JS.</li>
+        </ul>
+    </section>
+
+    <section id="accessibility">
+        <h2>Accessibility (a11y)</h2>
+        <p>Make web pages usable for everyone, including disabled users.</p>
+        <ul>
+            <li>Use <code>alt</code> on images.</li>
+            <li>Semantic tags for screen readers.</li>
+            <li><code>aria-*</code> attributes: e.g., <code>aria-label="Description"</code>.</li>
+            <li>Proper heading hierarchy.</li>
+            <li>Keyboard navigation: Use <code>tabindex</code>.</li>
+            <li>Color contrast and font sizes.</li>
+        </ul>
+        <p>Tools: Validate with WAVE or Lighthouse.</p>
+    </section>
+
+    <section id="advanced">
+        <h2>Advanced Topics</h2>
+        <h3>Canvas</h3>
+        <p><code>&lt;canvas&gt;</code> for drawing graphics with JS.</p>
+        <pre><code>&lt;canvas id="myCanvas" width="200" height="100"&gt;&lt;/canvas&gt;</code></pre>
+
+        <h3>SVG</h3>
+        <p>Scalable Vector Graphics with <code>&lt;svg&gt;</code>.</p>
+        <div class="example">
+            <svg width="100" height="100">
+                <circle cx="50" cy="50" r="40" stroke="black" fill="red" />
+            </svg>
+        </div>
+        <pre><code>&lt;svg width="100" height="100"&gt;
+    &lt;circle cx="50" cy="50" r="40" stroke="black" fill="red" /&gt;
+&lt;/svg&gt;</code></pre>
+
+        <h3>Data Attributes</h3>
+        <p>Custom attributes: <code>data-*</code>, e.g., <code>data-id="123"</code>.</p>
+
+        <h3>Web Components</h3>
+        <p>Advanced: Custom elements, shadow DOM, but requires JS.</p>
+
+        <h3>Responsive Design</h3>
+        <p>Use meta viewport and media queries in CSS.</p>
+
+        <h3>Entities</h3>
+        <p>Special characters: &lt; for <, &gt; for >, &amp; for &.</p>
+    </section>
+
+    <section id="best-practices">
+        <h2>Best Practices</h2>
+        <ul>
+            <li>Validate HTML with W3C validator.</li>
+            <li>Use semantic tags over divs.</li>
+            <li>Keep code indented and readable.</li>
+            <li>Separate structure (HTML), style (CSS), behavior (JS).</li>
+            <li>Optimize images and use lazy loading (<code>loading="lazy"</code> on img).</li>
+            <li>Test on multiple browsers/devices.</li>
+            <li>Follow SEO: Use titles, metas, alt texts.</li>
+            <li>Security: Sanitize inputs, use HTTPS.</li>
+        </ul>
+        <p>Next steps: Learn CSS for styling and JavaScript for interactivity.</p>
+    </section>
+
+    <footer>
+        <p>Created for learning purposes. End of tutorial.</p>
+    </footer>
+
+</body>
+</html>
