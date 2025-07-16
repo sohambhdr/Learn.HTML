@@ -1,2 +1,2 @@
 # Learn.HTML
-This is a complete guide to HTML (Hyper Text Mark Up Language) from very basic to advanced . You can create a notepad file or visual studio code file and copy ,paste the entire code in my index(html).html file to your file . Run it google chrome to see how it works .
+This is a complete guide to HTML (Hyper Text Mark Up Language) from very basic to advanced . You can create a notepad file or visual studio code file and copy ,paste the entire code in my index(soham).html file to your file . Run it google chrome to see and learn how it works .
